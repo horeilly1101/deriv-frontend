@@ -1,10 +1,11 @@
 function loadDerivative() {
-	var request = new XMLHttpRequest();
-	request.open('GET', 'http://localhost:4567/differentiate/x/x', true);
+	var request = new XMLHttpRequest()
+	var expr = document.getElementById("exprInput").value
+	request.open('GET', 'http://localhost:4567/differentiate/' + expr + '/x', true)
 	request.onload = function () {
-		console.log(this.response)
 		var header = document.getElementById("header2")
-		header.innerHTML = this.response
+		var obj = JSON.parse(this.response)
+		header.innerHTML = obj.data.result
 	}
 
 	request.send();
