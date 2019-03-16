@@ -12,7 +12,7 @@ function loadDerivative() {
 		
 		if (request.status != 400) {
 			var obj = JSON.parse(this.response)
-			header.innerHTML = obj.data.result
+			header.innerHTML = "$$" + obj.data.result + "$$"
 		} else {
 			header.innerHTML = "invalid inputs"
 		}

@@ -3,10 +3,16 @@
 <head>
 	<title>deriv</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 </head>
 <body>
 	<div id="demo">
-		<h2 id="header">deriv</h2>
+		<h2 id="header">deriv $x$</h2>
 		<input type="text" name="exprInput" id="exprInput" placeholder="Expression">
 		<input type="text" name="varInput" id="varInput" placeholder="Variable">
 		<button type="button" onclick="loadDerivative()">Differentiate</button>
