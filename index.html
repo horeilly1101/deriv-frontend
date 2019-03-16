@@ -4,6 +4,21 @@
 	<title>deriv</title>
 </head>
 <body>
-	<script src="scripts.js"></script>
+	<div id="demo">
+		<h2>The XMLHttpRequest Object</h2>
+		<button type="button" onclick="loadDoc()">Change Content</button>
+	</div>
+	<!-- <script src="scripts.js"></script> -->
+	<script>
+		function loadDoc() {
+			var request = new XMLHttpRequest();
+			request.open('GET', 'http://localhost:4567/differentiate/x/x', true);
+			request.onload = function () {
+				console.log(this.response)
+			}
+
+			request.send();
+		}
+	</script>
 </body>
 </html>
