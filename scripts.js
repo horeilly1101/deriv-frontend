@@ -9,8 +9,13 @@ function loadDerivative() {
 
 	request.onload = function () {
 		var header = document.getElementById("header")
-		var obj = JSON.parse(this.response)
-		header.innerHTML = obj.data.result
+		
+		if (request.status != 400) {
+			var obj = JSON.parse(this.response)
+			header.innerHTML = obj.data.result
+		} else {
+			header.innerHTML = "invalid inputs"
+		}
 	}
 
 	request.send();
@@ -36,6 +41,7 @@ function cleanInput(input) {
 				break
 			default:
 				newStr += char
+				break
 		}
 	}
 
