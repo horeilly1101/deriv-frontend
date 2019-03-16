@@ -13,11 +13,6 @@ function loadDerivative() {
 		header.innerHTML = obj.data.result
 	}
 
-	request.onerror = function () {
-		var header = document.getElementById("header")
-		header.innerHTML = "invalid inputs!"
-	}
-
 	request.send();
 }
 
