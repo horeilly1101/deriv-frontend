@@ -13,3 +13,22 @@ div {
     background-color: #fff;
     border-radius: 1em;
 }
+
+input {
+	text-align: center;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-width: 1px;
+	border-color: #565554;
+	height:60;
+	font-size:14pt;
+}
+
+button {
+	border-radius: 15px;
+}
+
+:focus {
+    outline: 0;
+}
