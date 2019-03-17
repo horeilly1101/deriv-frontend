@@ -2,20 +2,26 @@
 <html>
 <head>
 	<title>deriv</title>
+	<!-- load stylesheet -->
 	<link rel="stylesheet" type="text/css" href="styles.css">
+
+	<!-- configure MathJax -->
 	<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-</script>
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
+  		MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+
+	<!-- import MathJax -->
+	<script type="text/javascript" async
+  		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+	</script>
 </head>
 <body>
 	<div id="demo">
-		<h2 id="header">deriv</h2>
-		<input type="text" name="exprInput" id="exprInput" placeholder="Expression">
-		<input type="text" name="varInput" id="varInput" placeholder="Variable">
-		<button type="button" onclick="loadDerivative()">Differentiate</button>
+		<h1>$deriv$</h1>
+		<h2 id="header">$results$ $here$</h2>
+		<input type="text" name="exprInput" id="exprInput" placeholder="Expression" style="height:60;font-size:14pt;">
+		<input type="text" name="varInput" id="varInput" placeholder="Variable" style="height:60;font-size:14pt;">
+		<button type="button" onclick="loadDerivative()" style="height:60;font-size:14pt;">Differentiate</button>
 	</div>
 	<script src="scripts.js"></script>
 </body>

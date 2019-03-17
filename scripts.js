@@ -11,15 +11,16 @@ function loadDerivative() {
 		var header = document.getElementById("header")
 		
 		if (request.status != 400) {
+			console.log(this.response)
 			var obj = JSON.parse(this.response)
-			header.innerHTML = "$" + obj.data.result + "$"
-			MathJax.Hub.Queue(["Typeset",MathJax.Hub, header]);
+			header.innerHTML = "$\\frac{\\partial}{\\partial " + obj.data.var + "}[" + obj.data.expression + "] = " + obj.data.result + "$"
+			MathJax.Hub.Queue(["Typeset",MathJax.Hub, header])
 		} else {
 			header.innerHTML = "invalid inputs"
 		}
 	}
 
-	request.send();
+	request.send()
 }
 
 function cleanInput(input) {
