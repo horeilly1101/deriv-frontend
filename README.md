@@ -1,3 +1,3 @@
 # deriv-frontend
 
-A frontend to interact with the deriv REST API (In Progress!)
+A frontend to interact with the deriv REST API
