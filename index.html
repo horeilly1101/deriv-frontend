@@ -7,7 +7,11 @@
 
 	<!-- configure MathJax -->
 	<script type="text/x-mathjax-config">
-  		MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  		MathJax.Hub.Config({
+  			tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}, 
+  			CommonHTML: { linebreaks: { automatic: true, width: "75% container" } },
+  			"HTML-CSS": { linebreaks: { automatic: true, width: "75% container" } },
+         	SVG: { linebreaks: { automatic: true, width: "75% container" } } });
 	</script>
 
 	<!-- import MathJax -->
@@ -18,7 +22,7 @@
 <body>
 	<div id="demo">
 		<h1>$deriv$</h1>
-		<h2 id="header">$results$ $here$</h2>
+		<div id="header">$results$ $here$</div>
 		<button type="button" onclick="loadDerivative()" style="height:60;font-size:14pt;">Differentiate</button>
 		<input type="text" name="exprInput" id="exprInput" placeholder="Expression" size=30>
 		<br><br> $with$ $respect$ $to$ 
