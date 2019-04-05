@@ -16,7 +16,8 @@ function loadDerivative() {
 			header.innerHTML = "$$\\frac{\\partial}{\\partial " + obj.data.var + "}[" + obj.data.expression + "] = " + obj.data.result + "$$"
 			MathJax.Hub.Queue(["Typeset",MathJax.Hub, header])
 		} else {
-			header.innerHTML = "invalid inputs"
+			header.innerHTML = "$invalid$ $inputs$"
+			MathJax.Hub.Queue(["Typeset",MathJax.Hub, header])
 		}
 	}
 

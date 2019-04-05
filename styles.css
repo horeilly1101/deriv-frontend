@@ -16,8 +16,6 @@ body {
 #header {
     padding-top: 50px;
     padding-bottom: 50px;
-    padding-left: 10px;
-    padding-right: 10px;
     text-align: center;
     border-style: solid;
     border-width: 1px;
@@ -25,6 +23,7 @@ body {
     margin: 0 auto;
     margin-bottom: 30px;
     border-radius: 15px;
+    background-color: #D2EFFF;
 }
 
 input {
