@@ -13,7 +13,7 @@ function loadDerivative() {
 		if (request.status != 400) {
 			console.log(this.response)
 			var obj = JSON.parse(this.response)
-			header.innerHTML = "$$\\frac{\\partial}{\\partial " + obj.data.var + "}[" + obj.data.expression + "] = " + obj.data.result + "$$"
+			header.innerHTML = "$$\\frac{\\partial}{\\partial " + obj.data.var + "}\\Big[" + obj.data.expression + "\\Big] = " + obj.data.result + "$$"
 			MathJax.Hub.Queue(["Typeset",MathJax.Hub, header])
 		} else {
 			header.innerHTML = "$invalid$ $inputs$"
