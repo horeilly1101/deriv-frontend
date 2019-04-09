@@ -22,6 +22,8 @@ function loadDerivative() {
 			// insert the derivative into the web page
 			var obj = JSON.parse(this.response)
 			header.innerHTML = "$$\\frac{\\partial}{\\partial " + obj.data.var + "}\\Big[" + obj.data.expression + "\\Big] = " + obj.data.result + "$$"
+
+			// tell MathJax to compile the new html element to latex
 			MathJax.Hub.Queue(["Typeset",MathJax.Hub, header])
 		} else {
 			// insert an error message into the web page
