@@ -20,6 +20,7 @@ function loadDerivative() {
 		
 		if (request.status != 400) {
 			// insert the derivative into the web page
+			console.log(this.response)
 			var obj = JSON.parse(this.response)
 			header.innerHTML = "$$\\frac{\\partial}{\\partial " + obj.data.var + "}\\Big[" + obj.data.expression + "\\Big] = " + obj.data.result + "$$"
 
